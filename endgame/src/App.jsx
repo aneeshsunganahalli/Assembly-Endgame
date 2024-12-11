@@ -12,7 +12,9 @@ function App() {
   const [guessedLetters, setGuessedLetters] = React.useState([])
 
   // Derived Values
+  
   const numGuessesLeft = languages.length - 1
+  let guesses = numGuessesLeft;
   const wrongGuessCount = 
           guessedLetters.filter(letter => !currentWord.includes(letter)).length
   const isGameWon = 
@@ -27,6 +29,7 @@ function App() {
   // Static values
   const letterElements = currentWord.split("").map((letter,index) => {
     const isGuessedCorrect = guessedLetters.includes(letter) && currentWord.includes(letter)
+  
     const shouldRevealLetter = isGameLost || guessedLetters.includes(letter)
     const letterClassName = clsx(
         isGameLost && !guessedLetters.includes(letter) && "missed-letter"
@@ -67,6 +70,7 @@ function App() {
     const isLanguageLost = index < wrongGuessCount
     if(isLanguageLost){
       farewellMessage = getFarewellText(lang)
+      guesses -= 1
     }
     const styles = {
       backgroundColor: lang.backgroundColor,
@@ -131,7 +135,9 @@ function App() {
         {letterElements}
       </section>
 
-      <div></div>
+      <div className='counter'>
+        Remaining Guesses: {guesses}
+      </div>
 
       <section className='keyboard'>
         {keyboardElements}
