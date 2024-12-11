@@ -67,3 +67,17 @@ span.chip{
   padding: 4.5px;
   font-weight: 550;
 }
+
+span.chip.lost::before{
+  content: "☠️";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.7);
+}
+

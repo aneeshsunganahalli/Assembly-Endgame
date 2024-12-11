@@ -31,11 +31,10 @@
   margin-top: 40px;
 }
 
-.keyboard > button {
+.btn, .correct-guess, .wrong-guess{ 
   font-size: 1.2rem;
   height: 40px;
   width: 40px;
-  background-color: #FCBA29;
   border: 1px solid #D7D7D7;
   border-radius: 2px;
   font-weight: 550;
@@ -51,4 +50,14 @@
   padding: 10px 80px;
   font-size: 1.1rem;
   border-radius: 5px;
+}
+.btn{
+  background-color: #FCBA29;
+}
+.correct-guess{
+  background-color: #10A95B;
+}
+.wrong-guess{
+  background-color: #EC5D49;
+  
 }
