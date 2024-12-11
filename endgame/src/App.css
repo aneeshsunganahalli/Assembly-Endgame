@@ -1,0 +1,54 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.word{
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.word > span{
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #F9F4DA;
+  font-size: 1.12rem;
+}
+
+.keyboard{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 500px;
+  margin-top: 40px;
+}
+
+.keyboard > button {
+  font-size: 1.2rem;
+  height: 40px;
+  width: 40px;
+  background-color: #FCBA29;
+  border: 1px solid #D7D7D7;
+  border-radius: 2px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.new-game{
+  margin-top: 30px;
+  background-color: rgb(12, 169, 221);
+  color: black;
+  font-weight: 550;
+  border: 1px solid black;
+  padding: 10px 80px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
